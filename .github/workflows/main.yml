@@ -7,12 +7,12 @@ jobs:
 #now we can write our maven test command, maven checkstyle, 
 #scan our source code with sonarQube scanner and later will upload all this result to sonar cloud 
 # first step is to clone the source code "code checkout"
-     - name: code checkout
-       uses: action/checkout@v4
+      - name: code checkout
+        uses: actions/checkout@v4
 
-     - name: Maven test
-       run: mvn test
+      - name: Maven test
+        run: mvn test
     
-     - name: checkstyle
-       run: mvn checkstyle:checkstyle
-       
+      - name: checkstyle
+        run: mvn checkstyle:checkstyle
+
