@@ -35,8 +35,4 @@ jobs:
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
             -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
-            -Dsonar.sources=src/
-            -Dsonar.junit.reportspath=target/surefire-reports/
-            -Dsonar.jacoco.reportspath=target/jacoco.exec
-            -Dsonar.java.checkstyle.reportpaths=target/checkstyle-result.xml
-
+            -Dsonar.sources=$GITHUB_WORKSPACE
